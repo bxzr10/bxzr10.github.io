@@ -5,3 +5,141 @@ html {
     background-color: black;
     opacity: 0.9;
 }
+
+h1, h2, h3, h4,
+p {
+    text-align: center;
+    border: 1px aqua solid;
+}
+
+nav {
+    border: 1px red solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 69px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    /* ALSO WHY IS THIS NOT OVERRIDING?? */
+}
+
+.logo {
+    padding-left: 10px;
+    height: 50px;
+}
+
+li {
+    display: inline-flex;
+    margin-left: 15px;
+    margin-right: 10px;
+    text-decoration: underline;
+}
+
+.main {
+    border: 1px pink solid;
+    position: relative;
+    top: 63px;
+    width: 100%;
+}
+
+.container {
+    border: 1px orange solid;
+    display: flex;
+    justify-content: center;
+}
+
+.mission {
+    border: 1px green solid;
+    background-image: url("./img-mission-background.jpg");
+    height: 700px;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-bottom: 80px;
+}
+
+.mission > h2, h4 {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    background-color: black;
+}
+
+.featured {
+    border: 1px yellow solid;
+    width: 1000px;
+    margin-bottom: 80px;
+}
+
+.gallery {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    border: 1px yellow solid;
+    margin: 20px 12px;
+}
+
+.item .image {
+    height: 200px;
+    width: 300px;
+}
+
+.item .label {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.locations {
+    width: 1200px;
+    height: 570px;
+    background-image: url("./img-locations-background.jpg");
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.locations > h2 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.address {
+    background-color: black;
+    width: 300px;
+    margin: 15px 20px 0;
+    line-height: 2em;
+}
+
+.address h4, p {
+    opacity: 1;
+}
+
+.contact {
+    height: 200px;
+}
+
+.contact > h2 {
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.contact > h5 {
+    text-align: center;
+}
+
+.footer {
+    /* WHYYYYYYYYY IS THI SNOT VISIBLE */
+    border: 1px red solid;
+    text-align: left;
+    padding-left: 20px;
+}
