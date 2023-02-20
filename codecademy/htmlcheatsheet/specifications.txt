@@ -1,0 +1,259 @@
+
+
+Elements of CSS
+
+Using CSS together with HTML:
+
+Element / Description / Attributes (& options/examples?) / Example code (some kind of viz?)
+
+Link
+
+Used to link HTML documents to external resources. These include CSS files and image resources.
+
+href = specify URL to external resource
+rel = specify relationship between linked documents
+type = defines the type of content being linked
+
+<link href="./path/to/stylesheet/style.css" rel="stylesheet" type="text/css">
+
+
+
+CSS 101:
+
+Cascading Style Sheets is a language that can customize how HTML elements should appear.
+
+Can be written in a separate .css file, linked to the right HTML file with a <link> tag in the <head> section
+
+<head>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+Can be written within a HTML file using the <style> tags (not called inline)
+
+<head>
+  <style>
+    h1 {
+      color: blue;
+    }
+  </style>
+</head>
+
+Can be written for specific elements by adding inline to the element's opening HTML tag
+
+<h2 style="text-align: center;">Centered text</h2>
+
+<p style="color: blue; font-size: 18px;">Blue, 18-point text</p>
+
+Best practice is writing in separate files. To make it easier to refer to HTML elements in the CSS file, utilize selectors, like class and ID.
+
+
+CSS SELECTORS
+
+CSS Classes are reusable and applied to many elements
+
+    /* selects elements with class="column" */
+    .column {}
+
+CSS IDs are unique and used to only style a single element
+
+    /* selects elements with id="first-item" */
+    #first-item {}
+
+TODO: Look into when to use class vs ID
+
+Select based on element type
+
+    /* selects all h1 elements */
+    h1 {}
+
+Group selectors that are the same by listing them with commas:
+
+    h1, h2 {}
+
+Chain selectors to combine selectors:
+
+    /* select all h3 elements with class section-heading */
+    h3.section-heading {}
+
+    /* select all elements with section-heading and buttom class */
+    .section-heading.buttom {}
+
+Match items along their family lines. Select elements that are descended from another matched selector
+
+    /* select p elements that are descended from div elements */
+    div p {}
+
+    /* select elements of ordered lists displayed within sections */
+    section ol li {}
+
+Sepecificity is a ranking system used when there are multiple conflicting property values on the same element. The highest specificity wins. Selectors in order of decreasing specificity: ID(#), class(.), type
+
+    h1#header { color: blue; } // Implemented
+    h1 { color: red; } // Not implemented
+
+
+
+HTML attributes with multiple values
+Some HTML attributes can have multiple attribute values. Multiple attribute values are separated by a space between each attribute.
+<div class="value1 value2 value3"></div>
+
+
+
+
+
+
+
+
+
+
+THE BOX MODEL
+
+margin collapse = when vertical margins overlap each other such that only the largest individual block margin renders
+
+    /* The vertical margins will collapse to 30 pixels
+    instead of adding to 50 pixels. */
+    .block-one {
+    margin: 20px;
+    }
+
+    .block-two {
+    margin: 30px;
+    }
+
+auto keyword = use with margin to horizontally center an element within its container
+
+    div {
+    margin: auto;
+    }
+
+overflow = when content exceeds its container, how should it be handled? defaults to visible and the content will go over the "edges"
+can also be set to hidden or scrolll (overflow is accessible via scroll bars)
+
+    small-block {
+    overflow: scroll;
+    }
+
+element's box max and min width and height
+
+    /* Any element with class "column" will be at most 200 pixels wide, despite the width property value of 500 pixels. */
+
+    .column {
+    max-width: 200px;
+    width: 500px;
+    }
+
+visibility = render "hidden" objects invisible without removing them from the page and changing the page structure (& organization)
+
+    .invisible-elements {
+    visibility: hidden;
+    }
+
+property box-sizing controls which aspect of the box is determined by the height and width properties
+default value of this property is content-box, which renders the actual size of the element including the content box; but not the paddings and borders
+border-box, on the other hand, renders the actual size of an element including the content box, paddings, and borders.
+border-box is recommended when it is necessary to resize the padding and border but not just the content. For instance, the value border-box calculates an element’s height as follows: height = content height + padding + border.
+
+    .container {
+    box-sizing: border-box;
+    }
+
+
+
+DISPLAY AND POSITIONING
+
+z-index = high is foreground, low is background
+
+    //`element1` will overlap `element2`
+    .element1 {
+    position: absolute;
+    z-index: 1;
+    }
+
+    .element2 {
+    position: absolute;
+    z-index: -1;
+    }
+
+
+position property
+can be set to static, relative, absolute, or fixed
+
+relative = enables an element to be positioned relative to where it would have originally been on a web page (within the document flow?)
+offset properties determine the position relative to its non-offset position
+without offset, relative position has no affect of its positioning and will as as the default of static
+
+    .element {
+    position: relative;
+    }
+
+absolute = enables an element to  ignore sibling elements and instead be positioned relative to its closest parent element that is positioned with relative or absolute
+removes an element entirely from the document flow, position is adjusted using top/left/right/bottom attributes
+
+    .element {
+    position: absolute;
+    }
+
+fixed = element is set or pinned to a specific spot on a page, stays the same regardless of scrolling
+e.g. navigation bar often has a fixed position, allowing the user to scroll through the page and still access the nav bar
+
+    #navbar {
+    position: fixed;
+    }
+
+
+are these also position properties?
+float = how far left or right an element should float within its parent element
+width of the container (i.e. parent element) must be specified or the element will assume the full width of its containing element
+
+    /* The content will float to the left side of the container. */
+    .left {
+    float: left;
+    }
+
+    /* The content will float to the right side of the container. */
+    .right {
+    float: right;
+    }
+
+clear = how an element should behave when it bumps into another element in the same container
+usually used in combination with elements that have float
+this determines on which sides floating elements are allowed to float
+
+    /*This determines that no other elements within the same containing element are allowed to float on the left side of this element.*/
+    .element {
+    clear: left;
+    }
+
+    /*This determines that no other elements within the same containing element are allowed to float on the right side of this element.*/
+    .element {
+    clear: right;
+    }
+
+    /*This determines that no elements within the same containing element are allowed to float on either side of this element.*/
+    .element {
+    clear: both;
+    }
+
+    /*This determines that other elements within the same containing element are allowed to float on both side of this element.*/
+    .element {
+    clear: none;
+    }
+
+
+display property
+determined the type of render block for an element, can be: block, inline, and inline-block
+block-level elements take up the full width of their container with line breaks before and after; height and width can be manually adjusted (but will still take up a full "line"?)
+inline elements take up as little space as possible, flow horizontally, and cannot have their height or width manually adjusted
+inline-block elements can appear next to each other, and can have their height and width manually adjusted
+
+    .container1 {
+    display: block;
+    }
+
+    .container2 {
+    display: inline;
+    }
+
+    .container3 {
+    display: inline-block;
+    }
