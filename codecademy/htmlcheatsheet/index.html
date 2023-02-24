@@ -5,23 +5,213 @@
     </head>
     <body>
         
-        <h1>&lt;h1&gt;</h1>
+        <h1>HTML/CSS Layout Cheatsheet</h1>
 
-        <table>
-            <thead>
-                <th>HTML</th>
-                <th>Tag</th>
-                <th>Description</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>&lt;h1&gt;</td>
-                    <td>Header Level 1</td>
-                    <td>Used to format headers at the highest and biggest level</td>
-                </tr>
-            </tbody>
-            
-        </table>
+        <h2>Using HTML and CSS together</h2>
+
+        <section id="basics">
+            <h3>Linking HTML and CSS</h3>
+            <p class="section-description">CSS files should be linked in the &lt;head&gt; section of your HTML file, or it can be written in-file using &lt;style&gt; tags or in-line using CSS attributes within HTML opening tags</p>
+            <table>
+                <thead>
+                    <th>HTML</th>
+                    <th>Description</th>
+                    <th>Options or usage</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">&lt;link href="./path.css" rel="stylesheet" type="text/css"&gt;</td>
+                        <td class="code-description">Links HTML documents and external resources like CSS and images</td>
+                        <td class="code-options">href = URL to resource<br>rel = relationship between linked docs<br>type = type of content being linked</td>
+                        
+                    </tr>
+                    <tr>
+                        <td class="code">&lt;style&gt;&lt;/style&gt;</td>
+                        <td class="code-description">HTML tag that denotes CSS code will be written</td>
+                        <td class="code-options"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="formatting">
+            <h3>Text formatting in CSS</h3>
+            <p class="section-description">My most commonly used CSS attributes when formatting text on a page</p>
+            <table>
+                <thead>
+                    <th>HTML tag</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">letter-spacing</td>
+                        <td class="code-description">Adjust the spacing between characters</td>
+                        <td class="example">&lt;letter-spacing: 3px;&gt;</td>
+                    </tr>
+                    <tr>
+                        <td class="code">text-align</td>
+                        <td class="code-description">Adjust the alignment of text</td>
+                        <td class="example">&lt;text-align: center;&gt;</td>
+                    </tr>
+                    <tr>
+                        <td class="code">text-transform</td>
+                        <td class="code-description">Transform text to: capitalize, uppercase, lowercase, none, full-width</td>
+                        <td class="example">&lt;text-transform: uppercase;&gt;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <section id="selectors">
+            <h3>Selecting HTML elements in CSS</h3>
+            <p class="section-description">Identifies HTML elements in order of specificity (ID > class > type)</p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>HTML Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">.class {}</td>
+                        <td class="code-description">Non-unique labels that can be applied to many elements</td>
+                        <td class="example">&lt;div class="description"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td class="code">#id {}</td>
+                        <td class="code-description">Unique identifiers for elements in the DOM</td>
+                        <td class="example">&lt;section id="first-item"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td class="code">h1, h3 {}</td>
+                        <td class="code-description">Selects elements based on type</td>
+                        <td class="example">&lt;h1&gt;&lt;/h1&gt;</td>
+                    </tr>
+                    <tr>
+                        <td class="code">.section#id {}</td>
+                        <td class="code-description">Selects all elements with the named class(es) and ID(s)</td>
+                        <td class="example">&lt;div class="section subsection" id="main"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td class="code">section ol li {}</td>
+                        <td class="code-description">Matches elements along their family lines by searching through descendents</td>
+                        <td class="example">&lt;section&gt;&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/section&gt;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <h2>CSS design principles</h2>
+
+        <section id="box-model">
+            <h3>About the Box Model</h3>
+            <p class="section-description">Everything in CSS has a box around it, which are ruled by the guidelines of the box model</p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">margin</td>
+                        <td class="code-description">"White space" between an element box and other elements; wraps the content + padding + border; margin collapse occurs when vertical margins overlap such that only the greater margin is honored</td>
+                    </tr>
+                    <tr>
+                        <td class="code">border</td>
+                        <td class="code-description">Wraps the content + padding</td>
+                    </tr>
+                    <tr>
+                        <td class="code">padding</td>
+                        <td class="code-description">"White space" between the context box and the element box</td>
+                    </tr>
+                    <tr>
+                        <td class="code">attribute: auto</td>
+                        <td class="code-description">Auto keyword used to vertically center the element's attribute</td>
+                    </tr>
+                    <tr>
+                        <td class="code">attribute: 0 auto</td>
+                        <td class="code-description">Auto keyword used to horizontally center the element's attribute</td>
+                    </tr>
+                    <tr>
+                        <td class="code">overflow</td>
+                        <td class="code-description">Behavior to follow when content exceeds its container, as determined by: show, hide, clip, scroll, or auto</td>
+                    </tr>
+                    <tr>
+                        <td class="code">visibility</td>
+                        <td class="code-description">Shows or hides an element without changing the layout of a document, as determined by: visible, hidden, or collapse</td>
+                    </tr>
+                    <tr>
+                        <td class="code">float: left, float: right</td>
+                        <td class="code-description">Removes element from the normal flow of the page while remaining part of the document, and shifts the element to the left or right until it touches the edge of its containing box or another floated element; width of the container must be specified or it will assume the full width of its containing element</td>
+                    </tr>
+                    <tr>
+                        <td class="code">clear: left, clear: right, clear: both</td>
+                        <td class="code-description">Deterines whether an element must be moved below (cleared) left floating elements, right floating elements, or both that precede it</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="display">
+            <h3>Display and positioning elements</h3>
+            <p class="section-description"><strong>Display:</strong> Inner and outer display types govern how the context of a box or the box itself behaves in terms of page flow and in relation to other boxes on the page<br><strong>Position:</strong> Takes elements out of the normal document flow and makes them behave differently</p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">display: block</td>
+                        <td class="code-description">Box breaks out onto a new line filling the max width available in the container, height and width properties apply, paddings, margins, and borders will apply and push elements away from the box</td>
+                    </tr>
+                    <tr>
+                        <td class="code">display: inline</td>
+                        <td class="code-description">Box will not break onto a new line, height and width properties do not apply, vertical paddings, margins, and borders will apply but will not move other inline elements away, horizonal paddings, margins, and borders will apply and will move other inline elements away</td>
+                    </tr>
+                    <tr>
+                        <td class="code">display: inline-block</td>
+                        <td class="code-description">An element can appear next to another; height and width can be manually adjusted</td>
+                    </tr>
+                    <tr>
+                        <td class="code">display: flex</td>
+                        <td class="code-description">Inner display; direct children of this box will become flex items and follow flexbox specifications</td>
+                    </tr>
+                    <tr>
+                        <td class="code">display: grid</td>
+                        <td class="code-description">Inner display; direct children of this box will become grid items and follow grid specifications</td>
+                    </tr>
+                    <tr>
+                        <td class="code">position: static</td>
+                        <td class="code-description">Default; puts the element in its normal position in the document flow</td>
+                    </tr>
+                    <tr>
+                        <td class="code">position: relative</td>
+                        <td class="code-description">Puts the element in its normal position, then shifts it by the offsets indicated by &lt;top&gt;, &lt;bottom&gt;, &lt;left&gt;, and &lt;right&gt;</td>
+                    </tr>
+                    <tr>
+                        <td class="code">position: absolute</td>
+                        <td class="code-description">Removes an element from the normal document flow entirely, and puts it according to the offset indicated by &lt;top&gt;, &lt;bottom&gt;, &lt;left&gt;, and &lt;right&gt; relative to its containing element*</td>
+                    </tr>
+                    <tr>
+                        <td class="code">position: fixed</td>
+                        <td class="code-description">Removes an element from the normal document flow entirely, and puts it according to the offset indicated by &lt;top&gt;, &lt;bottom&gt;, &lt;left&gt;, and &lt;right&gt; relative** to the viewport</td>
+                    </tr>
+                    <tr>
+                        <td class="code">position: sticky</td>
+                        <td class="code-description">Allows an element to act like it's relatively positioned (follows the document flow), until it reaches a certain threshold position (e.g. 10px from top of viewport), after which it becomes fixed</td>
+                    </tr>
+                    <tr>
+                        <td class="code">z-index</td>
+                        <td class="code-description">Changes the stacking order of overlapping elements; the default for all positioned elements is auto (effectively 0)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>*Containing element:</strong> By default, the containing element of absolutely positioned elements is the <em>initial containing block</em>, which holdes the HTML element and has dimensions equal to the viewport; otherwise, if one of the aboslutely positioned elements' parents has its position defined as relative, then that relatively positioned element is the containing element<br><strong>**Fixed positioning</strong> is <em>usually</em> relative to the viewport, except for when one of the fixed element's ancestors is also fixed (idk what happens in the exception case though)</p>
+        </section>
+
     </body>
 
 </html>

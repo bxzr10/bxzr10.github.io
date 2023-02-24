@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Source+Serif+Pro&display=swap');
+/* @import is not supposed to be used in general, fix this later possibly via management (there's a stackoverflow bookmark on this) */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono:ital@0;1&family=Roboto+Slab&family=Roboto:ital@0;1&family=Source+Serif+Pro&display=swap');
 
 * {
     font-family: Inter;
