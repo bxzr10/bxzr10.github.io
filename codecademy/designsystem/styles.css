@@ -1,0 +1,87 @@
+
+
+.colors {
+    /* border: 1px solid black; why isn't this working?? */
+}
+
+.color-box {
+    width: 24%;
+    height: 300px;
+    display: inline-block;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hex {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.light {
+    color: white;
+}
+
+.dark {
+    color: black;
+}
+
+.dusty-red {
+    background-color: #BA4F56;
+}
+
+.light-blue {
+    background-color: #D6E5E3;
+}
+
+.dark-grey {
+    background-color: #204E4A;
+}
+
+.bright-gold {
+    background-color: #FFD700;
+}
+
+.font {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+}
+
+.sans-serif {
+    font-family: Inter;
+}
+
+.serif {
+    font-family: 'Source Serif Pro';
+}
+
+.mono {
+    font-family: 'Roboto Mono';
+}
+
+.header {
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.sample {
+    font-size: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-body {
+    font-size: 20px;
+}
+
+.text-body-em {
+    font-size: 24px;
+}

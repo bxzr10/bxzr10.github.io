@@ -1,0 +1,99 @@
+<!--
+
+Website style guide & design system
+
+Purpose:
+* Document visual vocabulary & reusable components
+* Organize the look and feel & stay consistent
+* Provide reference for how future construction should be styled
+
+
+
+5.
+In addition to the list of possible fonts, your style guide should include a section for specific text styles for page elements. For example, you could set main heading (<h1>) guidelines about text size, fonts, font styles, font weight, and more.
+
+
+6.
+Add any additional styles that you’d like to include to make your style guide/design system look great. This could include positioning, layout, additional colors, box model properties, and more.
+
+
+
+7.
+
+If you’d like to extend your site, consider:
+
+Adding additional components (you could document the various buttons that you’d like to use).
+Learning how and then implementing a responsive design so that your site looks great on all screen sizes.
+Adding navigation and splitting up your site so that each section has its own HTML page.
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="../../resources/main.css" />
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+        <title>website design guide</title>
+    </head>
+    <body>
+        <h1>bxzr1's website design & style guide</h1>
+
+        <section id="colors">
+            <h2>color palette :</h2>
+            <div class="color-box dusty-red">
+                <p class="color-info name light">Bittersweet shimmer</p>
+                <p class="color-info hex light">#BA4F56</p>
+            </div>
+            <div class="color-box light-blue">
+                <p class="color-info name dark">Azure</p>
+                <p class="color-info hex dark">#D6E5E3</p>
+            </div>
+            <div class="color-box dark-grey">
+                <p class="color-info name light">Dark slate gray</p>
+                <p class="color-info hex light">#204E4A</p>
+            </div>
+            <div class="color-box bright-gold">
+                <p class="color-info name dark">Gold</p>
+                <p class="color-info hex dark">#FFD700</p>
+            </div>
+        </section>
+
+        <section id="fonts">
+            <h2>font options :</h2>
+            <div class="font">
+                <p class="header sans-serif">Inter</p>
+                <p class="sample sans-serif">a quick brown fox jumped over the lazy dog</p>
+                <p class="sample bold sans-serif">sphinx of black quartz, judge my vow</p>
+            </div>
+            <div class="font">
+                <p class="header serif">Source Serif Pro</p>
+                <p class="sample serif">a quick brown fox jumped over the lazy dog</p>
+                <p class="sample bold serif">sphinx of black quartz, judge my vow</p>
+            </div>
+            <div class="font">
+                <p class="header mono">Roboto Mono</p>
+                <p class="sample mono">a quick brown fox jumped over the lazy dog</p>
+                <p class="sample bold mono">sphinx of black quartz, judge my vow</p>
+            </div>
+        </section>
+
+        <!-- fix this to align to the html cheat sheet page -->
+
+        <section id="styles">
+            <h2>text styles :</h2>
+            <h1>Main heading (1)</h1>
+            <p class="text-body">Font: Inter<br/>Font style: N/A<br />Font weight: N/A<br />Font size: N/A</p>
+            <h2>Subheading (2)</h2>
+            <p class="text-body">Font: Inter<br/>Font style: N/A<br />Font weight: N/A<br />Font size: N/A</p>
+            <h3>Section heading (3)</h3>
+            <p class="text-body">Font: Inter<br/>Font style: N/A<br />Font weight: N/A<br />Font size: N/A</p>
+            <p class="text-body">Body text or <span class="text-body-em">Emphasized body text</span></p>
+            <p class="text-body">Font: Inter<br/>Font style: N/A<br />Font weight: N/A<br />Font size: 20px, 24px</p>
+            <p class="text-body mono">Code</p>
+            <p class="text-body">Font: Roboto Mono<br/>Font style: N/A<br />Font weight: N/A<br />Font size: 20px</p>
+        </section>
+
+    </body>
+</html>
