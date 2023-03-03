@@ -1,7 +1,4 @@
 
-To complete this project, you should have completed the Codecademy lessons covering the CSS box model, display and positioning, colors, and typography. You can use more advanced CSS layout concepts like flexbox, CSS grid, or responsive design, but they won’t be required.
-
-Project Requirements
 2.
 In this project, you’ll build a style guide/design system for your website. Developers and designers use design systems in order to organize the look and feel of a website or web application. Design systems help to document the visual vocabulary and reusable components of a large website.
 
