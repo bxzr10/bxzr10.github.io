@@ -1,9 +1,86 @@
+<!-- 
+
+    Add combinators:
+
+    descendent (space)
+    adjacent sibling (+)
+    list (,)
+    attribute (e.g. a[title] or a[href='https://www.example.com'])
+    direct child (>)
+
+    Maybe add state or pseudo-classes:
+    a:link, a:visited, a:hover
+
+    pseudo-element:
+    p::first-line (first line of text inside of a p element, acts like a span is wrapped around the first formatted line and then selected)
+
+    calc function
+
+    transform functions
+
+    add display: inline-block
+    width and heigh are respected, padding margin and border push other elements away
+    does not break onto new line
+    becomes larger than its content if you explicitly add width and height properties
+
+
+    inline direction - left to right, or direction of a line of written text (L-R in English)
+    block direction - up and down, or cross axis of the direction of a line of written text
+
+    content box
+	• size of content + padding
+	• size it using width or height, or inline-size (size of the inline box) or block-size (size of the block box)
+
+    alternative box model (box-sizing: border-box)
+    width = content width + padding width + border width
+
+    background styling
+    background-image
+    small images tile automatically
+    background-repeat: no-repeat, repeat-x, repeat-y (along y axis), repeat (in both dirs)
+    background-size
+    takes length or % vals, or cover (img just large enough to cover the box area while keeping aspect ratio - likely to still "crop" the image), or contain (browser will make img right size to fit box, may end up with gaps on top/bottom due to img's aspect ratio)
+    background-position
+    default (0,0) - left top
+    horizontal, vertial
+    e.g. top center, 20px 10%, top 20px right 10px
+    ** is it better to use background-img or <img> to add an image?
+    ***screen readers cannot parse background images, so they should be purely decoration (important content should be part of the HTML page)
+    background attachment: scroll, fixed, local
+    local - fixes the bg to the element it is set on, so when the element scrolls the bg scrolls
+    scroll -fixed bg to page, not element
+    fixed - fixes bg to element, content or page scrolling does nothing
+    https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html
+
+
+
+    border-radius: horizontalradius verticalradius
+    border-radius: topleft toprgiht bottomright bottomleft
+    border-top-right-radius: ...
+    rounded corners
+
+
+    add mix and max sizes
+    https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS#min-_and_max-_sizes
+
+
+    add more text styling
+    https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text
+
+    add more layout styling
+    https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction
+
+ -->
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>html/css cheatsheet</title>
-        <link rel="stylesheet" type="text/css" href="./styles.css" /> 
+        <title>the really useful html/css cheatsheet</title>
+        <link rel="stylesheet" type="text/css" href="./styles-ext.css" /> 
         <link rel="stylesheet" type="text/css" href="../../resources/main.css" />
     </head>
     <body>
