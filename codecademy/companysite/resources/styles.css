@@ -1,0 +1,108 @@
+    /* font-family: 'Contrail One', sans-serif; */
+    /* font-family: 'Trocchi', serif; */
+
+body {
+    background-color: bisque;
+}
+
+h1 {
+    font-family: 'Contrail One';
+    font-size: 100px;
+    margin: 0 0;
+}
+
+h3 {
+    font-family: 'Trocchi';
+    letter-spacing: 2px;
+}
+
+h4 {
+    font-family: 'Contrail One';
+    font-size: 35px;
+}
+
+h6 {
+    font-family: 'Trocchi';
+    font-size: 24px;
+    margin: 0 0;
+}
+
+p {
+    font-family: 'Trocchi';
+    font-size: 18px;
+}
+
+/* div {
+    border: 1px solid green;
+} */
+
+section#hero {
+    max-height: 490px;
+    display: flex;
+}
+
+#hero-img {
+    background-image: url("./dan-gold-ZnPNZpjzi0M-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+}
+
+#hero-txt {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+.divider {
+    text-align: center;
+    line-height: 80px;
+    background-color: grey;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-header {
+    flex-basis: 100%;
+    padding-top: 50px;
+}
+
+.menu-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-items {
+    flex: 4;
+}
+
+.menu-price {
+    flex: 1;
+}
+
+#team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.team-member {
+    flex: 1;
+    text-align: center;
+}
+
+.team-name {
+    margin: 0 0;
+}
