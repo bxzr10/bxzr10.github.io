@@ -1,3 +1,37 @@
+<!--
+
+REMAINING INFO DUMPS
+
+CSS Building Blocks
+Pseudo-classes and pseudo-elements - Learn web development | MDN (mozilla.org)
+Combinators - Learn web development | MDN (mozilla.org)
+Cascade, specificity, and inheritance - Learn web development | MDN (mozilla.org)
+Cascade layers - Learn web development | MDN (mozilla.org)
+Handling different text directions - Learn web development | MDN (mozilla.org)
+Overflowing content - Learn web development | MDN (mozilla.org)
+CSS values and units - Learn web development | MDN (mozilla.org)
+Images, media, and form elements - Learn web development | MDN (mozilla.org)
+Styling tables - Learn web development | MDN (mozilla.org)
+Debugging CSS - Learn web development | MDN (mozilla.org)
+...cont...
+
+Styling Text
+...cont...
+
+CSS Layout
+...cont...
+Flexbox - Learn web development | MDN (mozilla.org)
+...cont...
+
+TO DO
+add table of contents
+
+FUTURE ADDITIONS
+how do the text boxes where you can text css live on the mdn doc pages work?
+
+-->
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +46,10 @@
 
         <h2>Using HTML and CSS together</h2>
 
-        <section id="basics">
+        <p>How does CSS work? Browser loads HTML it gets from the network. Converts it into the DOM, which represents the doucment as it is in the computer's memory (accessed by the coputer's memroy?). Fetches most of the resources linked by the HTML doc (embedded images, videos, and CSS, but not JS). Brwoser parses fetched CSS and attaches it to the right DOM notes (sorts rules by selector type into buckets, based on found seelctors determined which rules to apply to which nodes, attaches style to each node as required). Paints the page visuals onto the screen.</p>
+
+        <section id="basics"> 
+            <!-- change to linking  -->
             <h3>Linking HTML and CSS</h3>
             <p class="section-description">CSS files should be linked in the &lt;head&gt; section of your HTML file, or it can be written in-file using &lt;style&gt; tags or in-line using CSS attributes within HTML opening tags</p>
             <table>
@@ -53,6 +90,11 @@
                         <td class="example">&lt;letter-spacing: 3px;&gt;</td>
                     </tr>
                     <tr>
+                        <td class="code">line-height</td>
+                        <td class="code-description">Adjust the spacing of a line</td>
+                        <td class="example">&lt;line-height: 3px;&gt;</td>
+                    </tr>
+                    <tr>
                         <td class="code">text-align</td>
                         <td class="code-description">Adjust the alignment of text</td>
                         <td class="example">&lt;text-align: center;&gt;</td>
@@ -69,7 +111,7 @@
 
         <section id="selectors">
             <h3>Selecting HTML elements in CSS</h3>
-            <p class="section-description">Identifies HTML elements in order of specificity (ID > class > type)</p>
+            <p class="section-description">Identifies HTML elements in order of specificity (ID > class > type). CSS selectors or declarations that the browser does not recognized (browser isn't updated or the property is misspelled) is ignored</p>
             <table>
                 <thead>
                     <th>CSS</th>
@@ -136,6 +178,41 @@
             </table>
         </section>
 
+
+        <section id="pseudo">
+            <h3>Pseudo classes and pseudo elements</h3>
+            <p class="section-description"></p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>HTML Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">a:link</td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">a:visited</td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">a:hover</td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">p::first-line</td>
+                        <td class="code-description">first line of text inside a p element, acts like a span wrapped around the first line and is then selected</td>
+                        <td class="example"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
         <h2>CSS design principles</h2>
 
         <section id="box-model">
@@ -153,11 +230,23 @@
                     </tr>
                     <tr>
                         <td class="code">border</td>
-                        <td class="code-description">Wraps the content + padding</td>
+                        <td class="code-description">Wraps the content + padding; the border by default outlines the content-box</td>
                     </tr>
                     <tr>
                         <td class="code">padding</td>
                         <td class="code-description">"White space" between the context box and the element box</td>
+                    </tr>
+                    <tr>
+                        <td class="code">inline-size</td>
+                        <td class="code-description">Sizes the content box</td>
+                    </tr>
+                    <tr>
+                        <td class="code">block-size</td>
+                        <td class="code-description">Also sizes the content box?</td>
+                    </tr>
+                    <tr>
+                        <td class="code">box-sizing: border-box</td>
+                        <td class="code-description">Changes to the alternate box model, where the width of a box contains content width + padding width + border width</td>
                     </tr>
                     <tr>
                         <td class="code">attribute: auto</td>
@@ -187,6 +276,40 @@
             </table>
         </section>
 
+        <section id="sizing">
+            <h3>Sizing</h3>
+            <p class="section-description"></p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>HTML Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS#min-_and_max-_sizes</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
         <section id="display">
             <h3>Display and positioning elements</h3>
             <p class="section-description"><strong>Display:</strong> Inner and outer display types govern how the context of a box or the box itself behaves in terms of page flow and in relation to other boxes on the page<br><strong>Position:</strong> Takes elements out of the normal document flow and makes them behave differently</p>
@@ -206,7 +329,7 @@
                     </tr>
                     <tr>
                         <td class="code">display: inline-block</td>
-                        <td class="code-description">An element can appear next to another; height and width can be manually adjusted</td>
+                        <td class="code-description">Block element in the sense that width and height are respected, and padding, margin, and border push other elements away; inline in the sense that it does not break onto a new line and instead the lines adjust to fit the space it takes up</td>
                     </tr>
                     <tr>
                         <td class="code">display: flex</td>
@@ -242,9 +365,383 @@
                     </tr>
                 </tbody>
             </table>
-            <p><strong>*Containing element:</strong> By default, the containing element of absolutely positioned elements is the <em>initial containing block</em>, which holdes the HTML element and has dimensions equal to the viewport; otherwise, if one of the aboslutely positioned elements' parents has its position defined as relative, then that relatively positioned element is the containing element<br><strong>**Fixed positioning</strong> is <em>usually</em> relative to the viewport, except for when one of the fixed element's ancestors is also fixed (idk what happens in the exception case though)</p>
+            <p><strong>*Containing element:</strong> By default, the containing element of absolutely positioned elements is the <em>initial containing block</em>, which holdes the HTML element and has dimensions equal to the viewport; otherwise, if one of the aboslutely positioned elements' parents has its position defined as relative, then that relatively positioned element is the containing element<br><strong>**Fixed positioning</strong> is <em>usually</em> relative to the viewport, except for when one of the fixed element's ancestors is also fixed (idk what happens in the exception case though)<br><strong>Inline</strong> direction refers to the direction of written text (left to right in English)<br><strong>Block</strong> direction refers to the perpendicular direction of written text (up and down in English)</p>
+        </section>
+        <section id="flex">
+            <h3>Flexbox deep dive</h3>
+            <p class="section-description">use justify-content (main axis) and align-items (cross axis); these, plus display: flex apply to the parent container of the items you're trying to move around // order applies to the item itself, align-self applies to item itself</p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>HTML Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">display: flex</td>
+                        <td class="code-description">container is a flexbox, so the children inside flex (move next to each other), container itself is a block element, so takes a new line from its predecessors and followers</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">display: inline-flex</td>
+                        <td class="code-description">container is a flexbox, so the children inside flex (move next to each other), container itself is an inline element, so shares the line with its followers</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">justify-content</td>
+                        <td class="code-description">how items are spaced on the main axis (justify-items DOES NOT WORK IN FLEXBOX)</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">align-content</td>
+                        <td class="code-description">how multiple lines are spaced relative to each other</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">align-items</td>
+                        <td class="code-description">Cross axis; how items are spaced on a line in the cross axis direction</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">flex-wrap</td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">flex-grow</td>
+                        <td class="code-description">is used to specify how much space (and in what proportions) flex items absorb along the main axis.</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">flex-shrink</td>
+                        <td class="code-description">is used to specify how much flex items shrink and in what proportions along the main axis.</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">flex-basis</td>
+                        <td class="code-description">is used to specify the initial size of an element styled with flex-grow and/or flex-shrink.</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">flex</td>
+                        <td class="code-description">flex is used to specify flex-grow, flex-shrink, and flex-basis in one declaration.</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">flex-direction</td>
+                        <td class="code-description">flex-direction is used to specify the main and cross axes.</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">flex-flow</td>
+                        <td class="code-description">flex-flow is used to specify flex-wrap and flex-direction in one declaration.</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="grid">
+            <h3>grid</h3>
+            <p class="section-description">grid layouts are two-dimensional: they have a row, or inline, axis and a column, or block, axis.</p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>HTML Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">grid-template-areas specifies grid named grid areas</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">justify-items specifies how individual elements should spread across the row axis</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">justify-content specifies how groups of elements should spread across the row axis</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">justify-self specifies how a single element should position itself with respect to the row axis</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">align-items specifies how individual elements should spread across the column axis</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">align-content specifies how groups of elements should spread across the column axis</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">align-self specifies how a single element should position itself with respect to the column axis</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">grid-auto-rows specifies the height of rows added implicitly to the grid</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">grid-auto-columns specifies the width of columns added implicitly to the grid</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">grid-auto-flow specifies in which direction implicit elements should be created</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="text-layout-styling">
+            <h3>Text and layout styling</h3>
+            <p class="section-description"></p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>HTML Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">text https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">layout https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="background-borders">
+            <h3>RBackground and border styling</h3>
+            <p class="section-description"></p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>HTML Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">background-image</td>
+                        <td class="code-description">screen readers cannot parse background images, so they should be purely decoration (important content should be part of the HTML page)</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">background-repeat</td>
+                        <td class="code-description">small images tile automatically</td>
+                        <td class="example">background-repeat: no-repeat, repeat-x, repeat-y, repeat</td>
+                    </tr>
+                    <tr>
+                        <td class="code">background-size</td>
+                        <td class="code-description">takes length or % vals, or cover (img just large enough to cover the box area while keeping aspect ratio - likely to still "crop" the image), or contain (browser will make img right size to fit box, may end up with gaps on top/bottom due to img's aspect ratio)</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">background-position</td>
+                        <td class="code-description">default (0,0) - left top (horizontal, vertical)</td>
+                        <td class="example">background-position: top center, 20px 10%, top 20px right 10px</td>
+                    </tr>
+                    <tr>
+                        <td class="code">background-attachment</td>
+                        <td class="code-description">local - fixes the bg to the element it is set on, so when the element scrolls the bg scrolls, scroll -fixed bg to page, not element, fixed - fixes bg to element, content or page scrolling does nothing, https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html</td>
+                        <td class="example">background-attachment: scroll, fixed, local</td>
+                    </tr>
+                    <tr>
+                        <td class="code">border-radius</td>
+                        <td class="code-description">curvex corners</td>
+                        <td class="example">border-radius: horizontalradius verticalradius OR topleft topright bottomright bottomleft ALSO border-top-right-radius, etc.</td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
+        <section id="rules">
+            <h3>@import, @media, etc. // change this to @media and move import to linking</h3>
+            <p class="section-description"></p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>HTML Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">@import</td>
+                        <td class="code-description">imports a stylesheet into another CSS stylesheet</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">@media</td>
+                        <td class="code-description">creates media queries, which apply conditional logic for CSS styling</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="bonus">
+            <h3>Random things i don't think i'll ever use</h3>
+            <p class="section-description"></p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>HTML Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">calc()</td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description">transform functions</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">hierarchy/td>
+                        <td class="code-description">css has two rules for determining override: cascade and specificity: cascade - what appears later will take priority, except for when…, specificity - certain selectors (ID > class > element) take priority</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">address</td>
+                        <td class="code-description">The <address> element should only be used to provide contact information for the document contained with the nearest <article> or <body> element. It would be correct to use it in the footer of a site to include the contact information of the entire site, or inside an article for the contact details of the author, but not to mark up a list of addresses unrelated to the content of that page.</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">sup, sub</td>
+                        <td class="code-description">Superscript and subscript</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">code, pre, var, kbd, samp</td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">time</td>
+                        <td class="code-description"></td>
+                        <td class="example">datetime="2016-W04"</td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </body>
 
 </html>
