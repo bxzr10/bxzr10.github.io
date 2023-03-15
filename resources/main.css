@@ -1,11 +1,63 @@
-/* @import is not supposed to be used in general, fix this later possibly via management (there's a stackoverflow bookmark on this) */
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono:ital@0;1&family=Roboto+Slab&family=Roboto:ital@0;1&family=Source+Serif+Pro&display=swap');
+body {
+    font-family: Inconsolata;
+}
 
-* {
-    font-family: Inter;
+h1 {
+    font-family: 'Press Start 2P';
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-style: italic;
 }
 
 a {
     text-decoration: none;
     color: black;
+}
+
+.caption {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.red-dark {
+    background-color: #9F353A;
+}
+.red-med {
+    background-color: #E87A90;
+}
+.red-light {
+    background-color: #F8C3CD;
+}
+.blue-dark {
+    background-color: #005CAF;
+}
+.blue-med {
+    background-color: #0089A7;
+}
+.blue-light {
+    background-color: #D6E5E3;
+}
+.teal-dark {
+    background-color: #204E4A;
+}
+.teal-med {
+    background-color: #268785;
+}
+.teal-light {
+    background-color: #69B0AC;
+}
+.green-dark {
+    background-color: #227D51;
+}
+.green-light {
+    background-color: #B4D2BA;
+}
+.tan {
+    background-color: #DAC9A6;
 }
