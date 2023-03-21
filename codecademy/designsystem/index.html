@@ -134,12 +134,19 @@ Future additions:
             <p class="code">h3 {<br>
                 &nbsp;&nbsp;/* font-family: Inconsolata; */<br>
                 &nbsp;&nbsp;font-size: 1.5em;<br>
+            }
+            </p>
+
+            <h4>This is an H4 Sub-section Heading</h4>
+            <p class="code">h4 {<br>
+                &nbsp;&nbsp;/* font-family: Inconsolata; */<br>
+                &nbsp;&nbsp;font-size: 1.5em;<br>
                 &nbsp;&nbsp;font-size: italic;<br>
             }
             </p>
 
             <p>This is just normal body text. Special descriptions or lines can be offset by 15px on the left (margin-left) in order to break up any dense text.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet justo donec enim diam vulputate ut. Et malesuada fames ac turpis egestas integer eget. Non tellus orci ac auctor augue mauris augue neque gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Ullamcorper morbi tincidunt ornare massa. Non arcu risus quis varius quam. Lectus arcu bibendum at varius vel. Commodo odio aenean sed adipiscing. Facilisis mauris sit amet massa vitae tortor condimentum. Consequat mauris nunc congue nisi vitae suscipit tellus. Magna fringilla urna porttitor rhoncus. Enim ut tellus elementum sagittis vitae. Quam adipiscing vitae proin sagittis nisl rhoncus. Adipiscing at in tellus integer feugiat scelerisque varius morbi enim. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Ipsum dolor sit amet consectetur. In iaculis nunc sed augue lacus viverra vitae.</p>
+            <p class="code">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet justo donec enim diam vulputate ut. Et malesuada fames ac turpis egestas integer eget. Non tellus orci ac auctor augue mauris augue neque gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Ullamcorper morbi tincidunt ornare massa. Non arcu risus quis varius quam. Lectus arcu bibendum at varius vel. Commodo odio aenean sed adipiscing. Facilisis mauris sit amet massa vitae tortor condimentum. Consequat mauris nunc congue nisi vitae suscipit tellus. Magna fringilla urna porttitor rhoncus. Enim ut tellus elementum sagittis vitae. Quam adipiscing vitae proin sagittis nisl rhoncus. Adipiscing at in tellus integer feugiat scelerisque varius morbi enim. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Ipsum dolor sit amet consectetur. In iaculis nunc sed augue lacus viverra vitae.</p>
             <p class="code">p {<br>
                 &nbsp;&nbsp;/* font-family: Inconsolata; */<br>
                 &nbsp;&nbsp;/* font-size: 1em; */<br>
@@ -152,6 +159,65 @@ Future additions:
                 &nbsp;&nbsp;font-size: 1.25em;<br>
                 &nbsp;&nbsp;font-weight: bold;<br>
             }
+            </p>
+            <p><a href="#">Links</a> are not text-decorated, and the color should be changed to the main text color.</p>
+            <p class="code">p {<br>
+                &nbsp;&nbsp;/* font-family: Inconsolata; */<br>
+                &nbsp;&nbsp;text-decoration: none;<br>
+            }
+            </p>
+        </section>
+        <section class="css">
+            <h3>template setup :</h3>
+            Full HTML and CSS template for new pages.
+
+            <h4>HTML</h4>
+            <p class="code">
+                &lt;link rel="stylesheet" type="text/css" href="./styles.css" /&gt;<br>
+                &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;<br>
+                &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;<br>
+                &lt;link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet"&gt;<br>
+            </p>
+            <h4>CSS</h4>
+            <p class="code">
+                :root {<br>
+                    &nbsp;&nbsp;--main-bg-color: #203062;<br>
+                    &nbsp;&nbsp;--main-text-color: #ED8A8D;<br>
+                }<br><br>
+                
+                body {<br>
+                    &nbsp;&nbsp;font-family: Inconsolata;<br>
+                    &nbsp;&nbsp;padding: 1em;<br>
+                    &nbsp;&nbsp;background-color: var(--main-bg-color);<br>
+                    &nbsp;&nbsp;color: var(--main-text-color);<br>
+                }<br><br>
+                
+                h1 {<br>
+                    &nbsp;&nbsp;font-family: 'Press Start 2P';<br>
+                }<br><br>
+                
+                h2 {<br>
+                    &nbsp;&nbsp;font-size: 2em;<br>
+                }<br><br>
+                
+                h3 {<br>
+                    &nbsp;&nbsp;font-size: 1.5em;<br>
+                }<br><br>
+                
+                h4 {<br>
+                    &nbsp;&nbsp;font-size: 1.5em;<br>
+                    &nbsp;&nbsp;font-style: italic;<br>
+                }<br><br>
+                
+                a {<br>
+                    &nbsp;&nbsp;text-decoration: none;<br>
+                    &nbsp;&nbsp;color: var(--main-text-color);<br>
+                }<br><br>
+                
+                .caption {<br>
+                    &nbsp;&nbsp;font-size: 1.25em;<br>
+                    &nbsp;&nbsp;font-weight: bold;<br>
+                }
             </p>
         </section>
     </body>
