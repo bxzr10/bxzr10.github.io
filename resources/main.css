@@ -1,5 +1,14 @@
+:root {
+    --main-bg-color: #203062; /* sunset-blue-dark */
+    --main-text-color: #ED8A8D; /* sunset-orange */
+    /* text color also looks cute on white, figure out how to incorporate somewhere? */
+}
+
 body {
     font-family: Inconsolata;
+    padding: 1em;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
 }
 
 h1 {
@@ -17,7 +26,7 @@ h3 {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--main-text-color);
 }
 
 .caption {
@@ -75,14 +84,16 @@ a {
     background-color: #836195;
 }
 .sunset-red {
-    background-color: #DB7082;
+    background-color: #DB7082; /* against blue-dark, higher contrast, darker, also more clear against white bg */
 }
 .sunset-orange {
     background-color: #ED8A8D;
 }
 .sunset-pink {
-    background-color: #F6C6CA;
+    background-color: #F6C6CA; /* looks white against blue-dark, really really light on white  */
 }
 .sunset-white-dark {
     background-color: #EFEBED;
 }
+
+
