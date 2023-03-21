@@ -2,6 +2,7 @@
 
 body {
     font-family: Inconsolata;
+    margin: 0 20px;
 }
 
 h1 {
@@ -97,4 +98,30 @@ h3 {
 }
 .tan {
     background-color: #DAC9A6;
+}
+
+/* sunset palette */
+.sunset-blue-dark {
+    background-color: #203062;
+}
+.sunset-blue {
+    background-color: #313C79;
+}
+.sunset-purple-dark {
+    background-color: #62486C;
+}
+.sunset-purple {
+    background-color: #836195;
+}
+.sunset-red {
+    background-color: #DB7082;
+}
+.sunset-orange {
+    background-color: #ED8A8D;
+}
+.sunset-pink {
+    background-color: #F6C6CA;
+}
+.sunset-white-dark {
+    background-color: #EFEBED;
 }
