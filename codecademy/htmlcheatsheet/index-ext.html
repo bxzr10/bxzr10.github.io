@@ -10,10 +10,14 @@ Cascade layers - Learn web development | MDN (mozilla.org)
 Handling different text directions - Learn web development | MDN (mozilla.org)
 Overflowing content - Learn web development | MDN (mozilla.org)
 CSS values and units - Learn web development | MDN (mozilla.org)
+Sizing items in CSS + images section from nxt section (images, media, and form elements)
 Images, media, and form elements - Learn web development | MDN (mozilla.org)
 Styling tables - Learn web development | MDN (mozilla.org)
 Debugging CSS - Learn web development | MDN (mozilla.org)
-...cont...
+Organizing your CSS
+Assessment; fundamental CSS comprehension
+Assessment; creating a letterhead
+Assessment; cool-looking box
 
 Styling Text
 ...cont...
@@ -135,6 +139,16 @@ how do the text boxes where you can text css live on the mdn doc pages work?
                         <td class="example">&lt;h1&gt;&lt;/h1&gt;</td>
                     </tr>
                     <tr>
+                        <td class="code">h1 h3 {}</td>
+                        <td class="code-description">Selects elements that are descended from the prior listed element(s)</td>
+                        <td class="example">&lt;h1&gt;&lt;/h1&gt;</td>
+                    </tr>
+                    <tr>
+                        <td class="code">article > h4 {}</td>
+                        <td class="code-description">Selects elements that are a direct child of the first</td>
+                        <td class="example">&lt;h1&gt;&lt;/h1&gt;</td>
+                    </tr>
+                    <tr>
                         <td class="code">.section#id {}</td>
                         <td class="code-description">Selects all elements with the same multiple attributes</td>
                         <td class="example">&lt;div class="section subsection" id="main"&gt;</td>
@@ -142,6 +156,11 @@ how do the text boxes where you can text css live on the mdn doc pages work?
                     <tr>
                         <td class="code">h1 + p {}</td>
                         <td class="code-description">Matches elements that are adjacent siblings</td>
+                        <td class="example">&lt;section&gt;&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/section&gt;</td>
+                    </tr>
+                    <tr>
+                        <td class="code">h1 ~ p {}</td>
+                        <td class="code-description">Matches elements that are siblings at all</td>
                         <td class="example">&lt;section&gt;&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/section&gt;</td>
                     </tr>
                     <tr>
@@ -607,6 +626,50 @@ how do the text boxes where you can text css live on the mdn doc pages work?
 
         <section id="rules">
             <h3>@import, @media, etc. // change this to @media and move import to linking</h3>
+            <p class="section-description"></p>
+            <table>
+                <thead>
+                    <th>CSS</th>
+                    <th>Description</th>
+                    <th>HTML Example</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="code">@import</td>
+                        <td class="code-description">imports a stylesheet into another CSS stylesheet</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">@media</td>
+                        <td class="code-description">creates media queries, which apply conditional logic for CSS styling; media types describe the general category (optional, implied all)</td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code">@layer</td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                    <tr>
+                        <td class="code"></td>
+                        <td class="code-description"></td>
+                        <td class="example"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="images">
+            <h3>Images and videos are <em>replaced elements</em>, which means CSS can't affect them intrinsically, and can only affect their position on the page amongst other page elements.</h3>
             <p class="section-description"></p>
             <table>
                 <thead>
