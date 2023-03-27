@@ -1,8 +1,14 @@
+<!-- 
+    TODO:
+    account for overflow in project when details[open]
+ -->
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="./resources/main.css" />
+        <link rel="stylesheet" type="text/css" href="./resources/project-page.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -11,7 +17,6 @@
 
 <body>
     <nav>
-        <!-- figure out what the formatting was to add dividers between elements -->
         <ul>
             <li><a href="./main.html">home</a></li>
             <li><a href="./about.html">about me</a></li>
@@ -22,8 +27,7 @@
 
     <h1>codecademy coursework</h1>
 
-    <p>coursework projects</p>
-    <ul>
+    <ul class="project-list">
         <li><a href="./codecademy/codecademy-artsncrafts.html">dasmoto's arts and crafts</a></li>
         <li><a href="./codecademy/codecademy-htmlcheatsheet.html">html cheat sheet</a></li>
         <li><a href="./codecademy/codecademy-designsystem.html">website design system</a></li>
@@ -33,5 +37,86 @@
         <li><a href="./codecademy/codecademy-clubsite.html">responsive club website</a></li>
         <li><a href="./codecademy/codecademy-numguesser.html">number guesser</a></li>
     </ul>
+
+    <h2>Simple HTML and CSS projects</h2>
+    <section class="project-gallery">
+        <article class="project">
+            <details>
+                <summary>dasmoto's arts & crafts shop</summary>
+                <p>
+                    A simple HTML site for a humble art supply shop.
+                    <a href="./codecademy/codecademy-artsncrafts.html" class="go">&nbsp;&rarr;</a>
+                </p>
+            </details>
+        </article>
+        <article class="project">
+            <details>
+                <summary>html cheatsheet</summary>
+                <p>
+                    Handy reference tables for HTML and CSS 101.
+                    <a href="./codecademy/codecademy-htmlcheatsheet.html" class="go">&nbsp;&rarr;</a>
+                </p>
+            </details>
+        </article>
+        <article class="project">
+            <details>
+                <summary>site design style guide</summary>
+                <p>
+                    A simple guide to site design for this personal website.
+                    <a href="./codecademy/codecademy-designsystem.html" class="go">&nbsp;&rarr;</a>
+                </p>
+            </details>
+        </article>
+        <article class="project">
+            <details>
+                <summary>the tea cozy shop</summary>
+                <p>
+                    A simple but responsive site for a cozy tea shop.
+                    <a href="./codecademy/codecademy-teacozy.html" class="go">&nbsp;&rarr;</a>
+                </p>
+            </details>
+        </article>
+        <article class="project">
+            <details>
+                <summary>fotomatic camera</summary>
+                <p>
+                    An exercise in debugging a hopelessly jumbled site for the Instant Format Camera.
+                    <a href="./codecademy/codecademy-fotomatic.html" class="go">&nbsp;&rarr;</a>
+                </p>
+            </details>
+        </article>
+        <article class="project">
+            <details>
+                <summary>the mug shop</summary>
+                <p>
+                    A simple HTML site advertising the services of a custom soup shop.
+                    <a href="./codecademy/codecademy-companysite.html" class="go">&nbsp;&rarr;</a>
+                </p>
+            </details>
+        </article>
+        <article class="project">
+            <details>
+                <summary>get baked</summary>
+                <p>
+                    A simple HTML site (flyer) for a local (but unexplainably wealthy) dinner club.
+                    <a href="./codecademy/codecademy-clubsite.html" class="go">&nbsp;&rarr;</a>
+                </p>
+            </details>
+        </article>
+    </section>
+
+    <h2>Simple websites feat. JavaScript</h2>
+    <section class="project-gallery">
+        <article class="project">
+            <details>
+                <summary>number guesser</summary>
+                <p>
+                    Can you guess what I'm thinking?
+                    <a href="./codecademy/codecademy-numguesser.html" class="go">&nbsp;&rarr;</a>
+                </p>
+            </details>
+        </article>
+    </section>
+
 </body>
 </html>

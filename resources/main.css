@@ -35,9 +35,11 @@ body {
 nav ul {
     list-style-type: none;
     padding: 0 0;
+    margin: 0 0;
 }
 
 nav ul li {
+
     display: inline-block;
 }
 
@@ -67,6 +69,7 @@ h4 {
 }
 
 a {
+    text-decoration: none;
     color: var(--main-text-color);
 }
 

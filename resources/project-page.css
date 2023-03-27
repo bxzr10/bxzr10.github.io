@@ -1,3 +1,47 @@
-nav {
-    color: red !important;
+
+ul.project-list {
+    visibility: hidden;
+    position: absolute;
+}
+
+section.project-gallery {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+article.project {
+    height: 100px;
+    width: 250px;
+    padding: 1rem 1rem;
+    margin: 0.5rem 0.5rem;
+    border: 1px var(--white) solid;
+    border-radius: 1%;
+    background-color: var(--white);
+    opacity: 0.85;
+}
+
+details > summary {
+    font-size: 1.15rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+details > p {
+    font-family: Inter, sans-serif;
+    font-size: 0.9rem;
+}
+
+a.go {
+    text-decoration: none;
+}
+
+article.project:has(> details[open]) {
+    opacity: 1;
+    border: 2px var(--red) solid;
+    color: var(--red);
+}
+
+details[open] > p {
+    color: var(--red);
 }
