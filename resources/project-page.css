@@ -1,5 +1,4 @@
-
-ul.project-list {
+.project-list {
     visibility: hidden;
     position: absolute;
 }
@@ -15,7 +14,7 @@ article.project {
     padding: 1rem 1rem;
     margin: 0.5rem 0.5rem;
     border: 1px var(--white) solid;
-    border-radius: 1%;
+    border-radius: 5px;
     background-color: var(--white);
     opacity: 0.85;
 }

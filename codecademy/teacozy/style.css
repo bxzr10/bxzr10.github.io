@@ -50,7 +50,7 @@ section {
 }
 
 section#mission {
-    background-image: url("./img-mission-background.jpg");
+    background-image: url("./resources/img-mission-background.jpg");
     height: 700px;
     width: 1200px;
     display: flex;
@@ -94,7 +94,7 @@ section#featured {
 section#locations {
     height: 500px;
     width: 1200px;
-    background-image: url("./img-locations-background.jpg");
+    background-image: url("./resources/img-locations-background.jpg");
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
