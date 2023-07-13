@@ -1,0 +1,5 @@
+change h1 to follow (@media only screen and (min-width: 1400px)) media rules all the time (the spaced out letters on two lines look weird)
+
+can i grow the blurb (a baking and cooking club...) text as the screen gets smaller?
+
+the second media type (@media only screen and (max-width: 600px)) - as the screen continues to get smaller, the body text also becomes smaller and unreadable
