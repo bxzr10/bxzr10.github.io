@@ -1,3 +1,9 @@
+make page headers bigger
+
+nav bar text is a little small/hard to read
+
+
+CLUB SITE
 change h1 to follow (@media only screen and (min-width: 1400px)) media rules all the time (the spaced out letters on two lines look weird)
 
 can i grow the blurb (a baking and cooking club...) text as the screen gets smaller?
