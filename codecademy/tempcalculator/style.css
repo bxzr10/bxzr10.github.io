@@ -1,0 +1,27 @@
+* {
+    font-family: Inconsolata;
+}
+
+body {
+    padding: 0.75em;
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P';
+}
+
+fieldset legend {
+    padding: 0.5em;
+}
+
+form {
+    margin: 1em 0;
+}
+
+form input {
+    padding: 0.5em;
+}
+
+#out {
+    font-size: 2em;
+}

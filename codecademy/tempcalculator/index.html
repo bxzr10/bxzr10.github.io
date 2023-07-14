@@ -2,9 +2,42 @@
 <html>
     <head>
         <link href="./style.css" rel="stylesheet" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
         <title></title>
     </head>
     <body>
+        <h1>a temperature calculator</h1>
 
+        <fieldset>
+            <legend>Select your unit of input:</legend>
+                <input id="unit-in" type="radio"/>
+                <label for="unit-in" name="unit-in" value="kelvin">Kelvin</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select your unit of output:</legend>
+                <input id="unit-out" type="radio"/>
+                <label for="unit-out" name="unit-out" value="celcius">Celcius</label>
+        </fieldset>
+
+
+        <form id="form-in" onsubmit="submitForm(event)">
+            <label for="in">Enter the temperature you want to convert: </label>
+            <input id="in" type="number"/>
+            <button type="submit">Calculate!</button>
+        </form>
+
+        <div>
+            <h3>The new temperature is <span id="out"></span> °<span id="unit"></span></h3>
+        </div>
+
+
+
+
+
+
+        <script src="./script.js"></script>
     </body>
 </html>
