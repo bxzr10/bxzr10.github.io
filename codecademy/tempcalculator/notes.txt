@@ -1,30 +1,10 @@
-a static web page that will
-	• calculate temperature conversions between Kelvin and Celcius
-	• display 10 most recent conversions
-		○ in a table
-		○ categorized by symbols
-
-
-features
-
-	• values should be rounded to the nearest degree
-
 INTERMEDIATE
 
-	• save the 10 most recent calculations
-	• display a table containing the 10 most recent calculations
-		○ fields: input, output, symbol
-	• symbols are icons based on the temperature value in celcius (snow, rain, cloud, sun)
 	• trigger error or alert for non-valid input (non-integer)
-	• update the display area as input is entered
 
 ADVANCED
 
-	• allow conversions between fahrenheit, celcius, and kelvin in any order
-	• symbols should display at the same temperature equivalents no matter the unit
 	• use a CSS library like Bootstrap to style alerts on non-valid input using "flash"
 	
 OTHER
-	• test responsive on mobile devices
 	• apply ARIA controls
-	• store calcuations using Session state
