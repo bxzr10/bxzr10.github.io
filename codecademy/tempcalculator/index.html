@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./style.css" rel="stylesheet" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        <h1>a temperature calculator</h1>
+
+        <div id="select-unit">
+            <fieldset>
+                <legend>Select your unit of input:</legend>
+                    <input id="unit-in-c" type="radio" name="unit-in" value="°C"/>
+                    <label for="unit-in-c">Celcius</label>
+                    <input id="unit-in-f" type="radio" name="unit-in" value="°F"/>
+                    <label for="unit-in-f">Fahrenheit</label>
+                    <input id="unit-in-k" type="radio" name="unit-in" value="K" checked="checked"/>
+                    <label for="unit-in-k">Kelvin</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select your unit of output:</legend>
+                    <input id="unit-out-c" type="radio" name="unit-out" value="°C" checked="checked"/>
+                    <label for="unit-out-c">Celcius</label>
+                    <input id="unit-out-f" type="radio" name="unit-out" value="°F"/>
+                    <label for="unit-out-f">Fahrenheit</label>
+                    <input id="unit-out-k" type="radio" name="unit-out" value="K"/>
+                    <label for="unit-out-k">Kelvin</label>
+            </fieldset>
+        </div>
+
+
+        <form id="form" onsubmit="submitForm(event)">
+            <label for="value-in">Enter the temperature you want to convert: </label>
+            <input id="value-in" type="number" onchange="inputChange(event)"/>
+            <button type="submit">Calculate!</button>
+        </form>
+
+        <div>
+            <h3>The new temperature is <span id="value-out"></span><span id="unit"></span></h3>
+        </div>
+
+        <div id="display"></div>
+
+        <script src="./script.js"></script>
+        <script src="https://use.fontawesome.com/ee242abda1.js"></script>
+    </body>
+</html>
