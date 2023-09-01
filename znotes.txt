@@ -13,13 +13,6 @@ the second media type (@media only screen and (max-width: 600px)) - as the scree
 
 
 
-
-
-
-
-
-
-
 FASHION BLOG
 
 Basic Requirements
