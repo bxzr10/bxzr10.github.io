@@ -2,10 +2,11 @@
 <html>
     <head>
         <meta charset='utf-8' />
-        <link rel='stylesheet' type='text/css' href='./main.css' />
+        <link rel='stylesheet' type='text/css' href='./index.css' />
         <link rel='preconnect' href='https://fonts.googleapis.com'>
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
         <link href='https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Inter:wght@400;700&family=Press+Start+2P&display=swap' rel='stylesheet'>
+        <script src="./index.js" defer></script>
         <title>betty's portfolio</title>
     </head>
     <body>
@@ -32,6 +33,12 @@
                     </a>
                 </li> -->
             </ul>
+            <div class='toggle-switch'>
+                <label>
+                    <input type='checkbox' id='color-scheme-toggle'>
+                    <span class='slider'></span>
+                </label>
+            </div>
         </nav>
         <h1>welcome to betty's portfolio</h1>
         <p>Hello! I'm Betty and this is my portfolio. I'm currently seeking a career in front-end engineering to apply my technical skills and creativity hands-on, which I established during my time studying electrical engineering and working in program management.</p>
@@ -39,11 +46,11 @@
         <p>I'm eager to leverage my multidisciplined background to deliver interdisciplinary solutions, contributing to innovative and exciting projects in a dynamic environment.</p>
         <p>I'm currently based in Seattle, WA.</p>
 
-        <div>
-            <div class='portfolio-link'>Resume</div>
-            <div class='portfolio-link'>GitHub</div>
-            <div class='portfolio-link'>LinkedIn</div>
-            <div class='portfolio-link'>Email</div>
+        <div class='portfolio-link-container'>
+            <a class='portfolio-link' href='https://github.com/bxzr1' target='_blank'>GitHub</a>
+            <a class='portfolio-link' href='#'>LinkedIn</a>
+            <a class='portfolio-link' href='#'>Resume</a>
+            <a class='portfolio-link' href='#'>Contact Me</a>
         </div>
     </body>
 </html>
