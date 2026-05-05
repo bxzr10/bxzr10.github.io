@@ -15,7 +15,7 @@
     background-color: var(--bg-color);
     box-sizing: border-box;
     color: var(--text-color);
-    font-family: Inconsolata, monospace, serif;
+    font-family: 'Inconsolata', monospace, serif;
 }
 
 body {
@@ -23,8 +23,12 @@ body {
     margin: 2em 5em;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: 'Press Start 2P', monospace, serif;
+}
+
+h1 {
+    padding-top: 0.3em;
 }
 
 nav {
@@ -107,13 +111,6 @@ input:checked ~ .slider::before {
 }
 /* end theme toggle */
 
-.circle {
-    height: 5em;
-    width: 5em;
-    border-radius: 2.5em;
-    /* background: var(); */
-}
-
 p {
     text-align: justify;
 }
@@ -125,16 +122,15 @@ p {
 }
 
 .site-link {
-    border: 2px solid var(--text-color);
-    border-radius: 1em;
-    /* color: var(--main-text-accent); */
-    font-weight: bold;
-    height: 2em;
-    padding-top: 0.3em;
+    border: 5px solid var(--text-color);
+    border-radius: 0.6em;
+    font-family: 'Spline Sans Mono';
+    /* font-weight: bold; */
+    height: fit-content;
+    padding: 0.75em;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
-    width: 22%;
+    /* text-transform: uppercase; */
 }
 
 .site-link:hover {
@@ -149,6 +145,6 @@ p {
 @media screen and (max-width: 1600px) {
     .site-link {
         margin: 0.5em;
-        width: 60%;
+        width: 70%;
     }
 }
